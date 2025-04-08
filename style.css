@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Senhas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Gerador de Senhas">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Gerador de Senhas</h2>
+    <input type="text" id="nome" placeholder="Nome base da senha">
+    <select id="tipo">
+      <option>Alfanumérica</option>
+      <option>Numérica</option>
+    </select>
+    <input type="number" id="tamanho" value="12" min="4" max="50" placeholder="Tamanho da senha">
+    <label><input type="checkbox" id="maiusculas" checked> Usar letras maiúsculas</label>
+    <button onclick="gerarSenha()">Gerar Senha</button>
+    <input type="text" id="resultado" readonly>
+    <button onclick="copiarSenha()">Copiar</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
